@@ -10,7 +10,7 @@ AiService的声明式的写法
 
 但是,注解的方式牺牲灵活性,推荐使用工厂类注入的方式
  */
-@AiService
+//@AiService
 public interface AICodeHelperService {
 
     @SystemMessage(fromResource = "system-prompt.txt")

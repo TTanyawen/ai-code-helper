@@ -37,4 +37,16 @@ public class HelloWorld {
 希望這能幫助到你！如果還有其他問題，隨時告訴我～ Let's keep coding and have fun! 🚀👩‍💻👨‍💻
  */
 
+    //会话记忆test
+    @Test
+    void chatWithMemory() {
+        String res = aiCodeHelperService.chat("你好,我是Angela");
+        System.out.println(res);
+        res = aiCodeHelperService.chat("你好,我是谁来着?");
+        System.out.println(res);
+    }
+    /*
+    嘿Hey Angela！超開心遇到你呀！😊 你想聊些什麼呢？是關於程式學習的規劃、有趣的項目建議，還是準備面試的小技巧？快告訴我吧！Let's make your coding journey super exciting and fruitful! 🚀✨
+哈哈，你剛剛告訴我你是Angela喲！😉 不過沒關係，有時候我們都會有點小迷糊啦！那麼，Angela，你想聊些什麼呢？是關於程式學習的規劃、有趣的項目建議，還是準備面試的小技巧？Let's dive in and make some awesome progress! 🌟
+     */
 }
