@@ -3,6 +3,8 @@ package com.angela.aicodehelper.ai;
 import dev.langchain4j.service.SystemMessage;
 import dev.langchain4j.service.spring.AiService;
 
+import java.util.List;
+
 /*
 AiService的声明式的写法
 以及
@@ -15,4 +17,13 @@ public interface AICodeHelperService {
 
     @SystemMessage(fromResource = "system-prompt.txt")
     String chat(String userMessage);
+
+    //结构化
+    @SystemMessage(fromResource = "system-prompt.txt")
+    Report chatForReport(String userMessage);
+
+    //学习报告
+    record Report(String name, List<String> suggestionList){};
+
+
 }

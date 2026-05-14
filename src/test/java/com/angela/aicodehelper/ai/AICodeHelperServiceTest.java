@@ -49,4 +49,11 @@ public class HelloWorld {
     嘿Hey Angela！超開心遇到你呀！😊 你想聊些什麼呢？是關於程式學習的規劃、有趣的項目建議，還是準備面試的小技巧？快告訴我吧！Let's make your coding journey super exciting and fruitful! 🚀✨
 哈哈，你剛剛告訴我你是Angela喲！😉 不過沒關係，有時候我們都會有點小迷糊啦！那麼，Angela，你想聊些什麼呢？是關於程式學習的規劃、有趣的項目建議，還是準備面試的小技巧？Let's dive in and make some awesome progress! 🌟
      */
+
+    @Test
+    void chatForReport() {
+        String userMessage="你好我是Angela,学习编程两年.请帮我置定学习报告";
+        AICodeHelperService.Report report = aiCodeHelperService.chatForReport(userMessage);
+        System.out.println(report);
+    }
 }
