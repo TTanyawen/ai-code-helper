@@ -2,6 +2,7 @@ package com.angela.aicodehelper.ai;
 
 import dev.langchain4j.service.SystemMessage;
 import dev.langchain4j.service.spring.AiService;
+import dev.langchain4j.service.Result;
 
 import java.util.List;
 
@@ -24,6 +25,10 @@ public interface AICodeHelperService {
 
     //学习报告
     record Report(String name, List<String> suggestionList){};
+
+    //RAG,返回封装后的结果
+    @SystemMessage(fromResource = "system-prompt.txt")
+    Result<String> chatWithRag(String userMessage);
 
 
 }

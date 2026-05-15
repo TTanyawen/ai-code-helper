@@ -1,5 +1,6 @@
 package com.angela.aicodehelper.ai;
 
+import dev.langchain4j.service.Result;
 import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -58,7 +59,8 @@ public class HelloWorld {
     }
     @Test
     void chatWithRag(){
-        String result=aiCodeHelperService.chat("怎么学习java，请给我一些面试题");
-        System.out.println(result);
+        Result<String> result=aiCodeHelperService.chatWithRag("怎么学习java，请给我一些面试题");
+        System.out.println(result.sources());
+        System.out.println(result.content());
     }
 }
