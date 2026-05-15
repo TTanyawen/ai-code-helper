@@ -56,4 +56,9 @@ public class HelloWorld {
         AICodeHelperService.Report report = aiCodeHelperService.chatForReport(userMessage);
         System.out.println(report);
     }
+    @Test
+    void chatWithRag(){
+        String result=aiCodeHelperService.chat("怎么学习java，请给我一些面试题");
+        System.out.println(result);
+    }
 }
