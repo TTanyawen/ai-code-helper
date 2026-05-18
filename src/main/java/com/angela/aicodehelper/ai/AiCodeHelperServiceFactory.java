@@ -1,6 +1,7 @@
 package com.angela.aicodehelper.ai;
 
 import com.angela.aicodehelper.ai.tools.InterviewQuestionTool;
+import dev.langchain4j.mcp.McpToolProvider;
 import dev.langchain4j.memory.ChatMemory;
 import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 import dev.langchain4j.model.chat.ChatModel;
@@ -16,6 +17,9 @@ public class AiCodeHelperServiceFactory {
     private ChatModel qwenChatModel;
     @Resource
     private ContentRetriever contentRetriever;
+
+    @Resource
+    private McpToolProvider mcpToolProvider;
     @Bean
     public AICodeHelperService AiCodeHelperService(){
         //会话记忆
@@ -25,6 +29,7 @@ public class AiCodeHelperServiceFactory {
                 .chatMemory(chatMemory)//会话记忆
                 .contentRetriever(contentRetriever)
                 .tools(new InterviewQuestionTool())
+                .toolProvider(mcpToolProvider)
                 .build();
         return aiCodeHelperService;
     }

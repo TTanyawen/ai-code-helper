@@ -68,4 +68,11 @@ public class HelloWorld {
         String result = aiCodeHelperService.chat("有哪些常见的计算机网络面试题？");
         System.out.println(result);
     }
+
+
+    @Test
+    void chatWithMcp() {
+        String result = aiCodeHelperService.chat("什么是懂鸟，懂鸟有什么功能？？");
+        System.out.println(result);
+    }
 }
