@@ -1,5 +1,6 @@
 package com.angela.aicodehelper.ai;
 
+import com.angela.aicodehelper.ai.tools.InterviewQuestionTool;
 import dev.langchain4j.memory.ChatMemory;
 import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 import dev.langchain4j.model.chat.ChatModel;
@@ -23,6 +24,7 @@ public class AiCodeHelperServiceFactory {
                 .chatModel(qwenChatModel)
                 .chatMemory(chatMemory)//会话记忆
                 .contentRetriever(contentRetriever)
+                .tools(new InterviewQuestionTool())
                 .build();
         return aiCodeHelperService;
     }
